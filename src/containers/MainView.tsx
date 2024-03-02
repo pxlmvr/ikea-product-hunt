@@ -2,8 +2,10 @@ import { useContext, useState } from 'react'
 import { ProductHunt } from './ProductHunt'
 import { CreateTeam } from './CreateTeam'
 import { TeamContext } from '../context/teamContext'
+import { Header } from '../components/Header'
+import { Navigation } from '../components/Navigation'
 
-type Tab = 'product-hunt' | 'create-team'
+export type Tab = 'product-hunt' | 'create-team'
 
 export const MainView: React.FC = () => {
   const { products } = useContext(TeamContext)
@@ -14,23 +16,15 @@ export const MainView: React.FC = () => {
 
   return (
     <div>
-      <nav>
-        <button
-          onClick={() => {
-            setCurrentTab('product-hunt')
-          }}
-        >
-          Product Hunt
-        </button>
-        <button
-          onClick={() => {
-            setCurrentTab('create-team')
-          }}
-        >
-          Create Team
-        </button>
-      </nav>
+      <Header
+        pageTitle={
+          currentTab === 'product-hunt'
+            ? 'Trova i prodotti'
+            : 'Crea la tua squadra'
+        }
+      />
       {currentTab === 'product-hunt' ? <ProductHunt /> : <CreateTeam />}
+      <Navigation currentTab={currentTab} switchTab={setCurrentTab} />
     </div>
   )
 }

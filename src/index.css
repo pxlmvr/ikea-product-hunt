@@ -1,3 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 64px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,4 +57,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --text-color: #1d1d1b;
+  --yellow: #feda00;
+  --blue: #0058a2;
+  --gray: rgb(179, 179, 178);
+  --pearl: rgb(241, 243, 244);
+  --dark-pearl: rgb(159, 173, 179);
+}
+
+h1 {
+  font-size: 1.44rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
 }
