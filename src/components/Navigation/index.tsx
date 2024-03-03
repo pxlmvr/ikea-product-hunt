@@ -24,7 +24,7 @@ export const Navigation: React.FC<Props> = ({ currentTab, switchTab }) => {
           }
         >
           <Clip />
-          Caccia
+          Lista
         </button>
         <button
           onClick={() => {

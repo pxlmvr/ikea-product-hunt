@@ -1,0 +1,22 @@
+.meter {
+  background-color: var(--blue);
+  width: 100%;
+  position: relative;
+  height: 8px;
+}
+
+.progress {
+  background-color: var(--yellow);
+  width: 20%;
+  height: 8px;
+}
+
+.counter {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.wrapper {
+  margin-bottom: 2rem;
+}

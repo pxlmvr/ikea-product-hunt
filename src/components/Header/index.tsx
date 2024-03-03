@@ -7,7 +7,7 @@ type Props = {
 export const Header: React.FC<Props> = ({ pageTitle }) => {
   return (
     <header className={classes.header}>
-      <h1>{pageTitle}</h1>
+      <p>{pageTitle}</p>
     </header>
   )
 }
