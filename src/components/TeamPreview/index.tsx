@@ -12,19 +12,19 @@ export const TeamPreview: React.FC = () => {
 
   const [showDeletionModal, setShowDeletionModal] = useState<boolean>(false)
 
+  const deleteTeam = (): void => {
+    localStorage.removeItem('products')
+    setProducts([])
+    setShowDeletionModal(false)
+  }
+
   return (
     <React.Fragment>
       {showDeletionModal && (
         <Modal>
           <h2>Vuoi veramente cancellare la tua squadra?</h2>
           <div className={classes.modalActions}>
-            <Button
-              style="danger"
-              onClick={() => {
-                setProducts([])
-                setShowDeletionModal(false)
-              }}
-            >
+            <Button style="danger" onClick={deleteTeam}>
               Sì, cancella
             </Button>
             <Button

@@ -27,6 +27,15 @@ export const CreateTeam: React.FC = () => {
     return () => clearTimeout(timerId)
   }, [showSuccessAlert])
 
+  const saveTeam = (): void => {
+    const productsObject: IkeaProduct[] = selectedProducts.map((product) => ({
+      name: product,
+      found: false,
+    }))
+    setProducts(productsObject)
+    setShowSuccessAlert(true)
+  }
+
   return (
     <main>
       {products.length ? (
@@ -68,14 +77,7 @@ export const CreateTeam: React.FC = () => {
             </div>
             <Button
               fullWidth
-              onClick={() => {
-                const pobj: IkeaProduct[] = selectedProducts.map((product) => ({
-                  name: product,
-                  found: false,
-                }))
-                setProducts(pobj)
-                setShowSuccessAlert(true)
-              }}
+              onClick={saveTeam}
               disabled={selectedProducts.length !== 11}
             >
               Salva squadra

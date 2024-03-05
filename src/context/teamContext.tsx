@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { IkeaProduct } from '../data/series'
 
 type TeamContextType = {
@@ -17,6 +17,12 @@ export const TeamProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [products, setProducts] = useState<IkeaProduct[]>([])
+
+  useEffect(() => {
+    if (products.length) {
+      localStorage.setItem('products', JSON.stringify(products))
+    }
+  }, [products])
 
   return (
     <TeamContext.Provider
