@@ -23,7 +23,11 @@ export const MainView: React.FC = () => {
             : 'Crea la tua squadra'
         }
       />
-      {currentTab === 'product-hunt' ? <ProductHunt /> : <CreateTeam />}
+      {currentTab === 'product-hunt' ? (
+        <ProductHunt setCurrentTab={setCurrentTab} />
+      ) : (
+        <CreateTeam />
+      )}
       <Navigation currentTab={currentTab} switchTab={setCurrentTab} />
     </div>
   )

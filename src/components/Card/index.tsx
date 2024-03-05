@@ -3,7 +3,7 @@ import { mergeClasses } from '../../utils/mergeClasses'
 
 type Props = {
   className?: string
-  children: React.ReactNode
+  children: React.ReactNode | string
 }
 
 export const Card: React.FC<Props> = ({ className, children }) => {

@@ -17,6 +17,9 @@ export const CreateTeam: React.FC = () => {
     <main>
       <Progress max={11} value={selectedProducts.length} />
       <Card>
+        <p>
+          Seleziona i tuoi 11 <s>giocat...</s> ehm, prodotti:
+        </p>
         <div className={classes.productContainer}>
           {series.map((item) => {
             return (
@@ -56,7 +59,7 @@ export const CreateTeam: React.FC = () => {
           }}
           disabled={selectedProducts.length !== 11}
         >
-          Save team
+          Salva squadra
         </Button>
       </Card>
     </main>
