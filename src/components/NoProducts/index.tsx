@@ -1,7 +1,7 @@
 import classes from './styles.module.css'
 
 import { Card } from '@/components/Card'
-import emptyImage from '@/assets/images/empty.jpg'
+import emptyImage from '@/assets/images/empty.png'
 import { Button } from '../Button'
 import { Tab } from '@/containers/MainView'
 
