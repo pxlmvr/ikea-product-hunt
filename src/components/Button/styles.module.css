@@ -8,18 +8,41 @@
   font-weight: 600;
 }
 
+.button.danger {
+  background-color: #bc4646;
+  color: #fff;
+}
+
+.button.naked {
+  background-color: #fff;
+  border: 1px solid #1d1d1b;
+  color: #1d1d1b;
+}
+
 .button:hover,
 .button:focus {
   background-color: var(--yellow);
   color: var(--blue);
 }
 
+.button.danger:hover,
+.button.danger:focus {
+  background-color: #843030;
+  color: #fff;
+}
+
+.button.naked:hover,
+.button.naked:focus {
+  background-color: #fff;
+  border: 1px solid #1d1d1b;
+  color: #1d1d1b;
+}
+
 .button:disabled,
 .button:disabled:hover,
 .button:disabled:focus {
-  opacity: 0.5;
-  background-color: var(--blue);
-  color: var(--yellow);
+  background-color: var(--pearl);
+  color: #919189;
 }
 
 .button.full {
