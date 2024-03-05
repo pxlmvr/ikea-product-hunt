@@ -1,4 +1,4 @@
-export const Seatch: React.FC = () => {
+export const Search: React.FC = () => {
   return (
     <svg
       width="24"

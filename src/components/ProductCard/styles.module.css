@@ -1,3 +1,19 @@
 .productCard {
   margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.productCard.found {
+  background-color: var(--blue);
+  color: var(--yellow);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

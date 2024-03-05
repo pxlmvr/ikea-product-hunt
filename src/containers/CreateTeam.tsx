@@ -1,17 +1,29 @@
 import classes from './styles.module.css'
 
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { IkeaProduct, ProductName, series } from '../data/series'
 import { TeamContext } from '../context/teamContext'
 import { Progress } from '../components/Progress'
 import { Card } from '../components/Card'
 import { Button } from '../components/Button'
 import { Checkbox } from '../components/Checkbox'
+import { SuccessAlert } from '@/components/SuccessAlert'
 
 export const CreateTeam: React.FC = () => {
   const { setProducts } = useContext(TeamContext)
 
   const [selectedProducts, setSelectedProducts] = useState<ProductName[]>([])
+  const [showSuccessAlert, setShowSuccessAlert] = useState<boolean>(false)
+
+  useEffect(() => {
+    let timerId: NodeJS.Timeout
+    if (showSuccessAlert) {
+      timerId = setTimeout(() => {
+        setShowSuccessAlert(false)
+      }, 5000)
+    }
+    return () => clearTimeout(timerId)
+  }, [showSuccessAlert])
 
   return (
     <main>
@@ -56,12 +68,14 @@ export const CreateTeam: React.FC = () => {
               found: false,
             }))
             setProducts(pobj)
+            setShowSuccessAlert(true)
           }}
           disabled={selectedProducts.length !== 11}
         >
           Salva squadra
         </Button>
       </Card>
+      <SuccessAlert show={showSuccessAlert} message="Squadra salvata!" />
     </main>
   )
 }

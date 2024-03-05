@@ -1,9 +1,12 @@
 import classes from './styles.module.css'
 
-import { IkeaProduct } from '../../data/series'
-import { Card } from '../Card'
+import { IkeaProduct } from '@/data/series'
+import { Card } from '@/components/Card'
 import { useContext } from 'react'
-import { TeamContext } from '../../context/teamContext'
+import { TeamContext } from '@/context/teamContext'
+import { Search } from '@/components/icons/Search'
+import { Check } from '@/components/icons/Check'
+import { mergeClasses } from '@/utils/mergeClasses'
 
 type Props = {
   product: IkeaProduct
@@ -11,6 +14,10 @@ type Props = {
 
 export const ProductCard: React.FC<Props> = ({ product }) => {
   const { products, setProducts } = useContext(TeamContext)
+
+  const appliedClass = product.found
+    ? mergeClasses([classes.productCard, classes.found])
+    : classes.productCard
 
   return (
     <div
@@ -25,10 +32,12 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
 
         setProducts(newProducts)
       }}
-      className={classes.productCard}
-      style={{ textDecoration: product.found ? 'underline' : 'none' }}
+      className={appliedClass}
     >
-      <Card>{product.name as string}</Card>
+      <div className={classes.content}>
+        {product.name as string}
+        {product.found ? <Check /> : <Search />}
+      </div>
     </div>
   )
 }
