@@ -1,7 +1,7 @@
-import { Clip } from '../icons/Clip'
-import { List } from '../icons/List'
-import { mergeClasses } from '../../utils/mergeClasses'
-import { Tab } from '../../containers/MainView'
+import { Eye } from '@/components/icons/Eye'
+import { mergeClasses } from '@/utils/mergeClasses'
+import { Tab } from '@/containers/MainView'
+import { Trophy } from '@/components/icons/Trophy'
 import classes from './styles.module.css'
 
 type Props = {
@@ -23,8 +23,8 @@ export const Navigation: React.FC<Props> = ({ currentTab, switchTab }) => {
               : classes.tabSelector
           }
         >
-          <Clip />
-          Lista
+          <Eye />
+          Ricerca
         </button>
         <button
           onClick={() => {
@@ -36,8 +36,8 @@ export const Navigation: React.FC<Props> = ({ currentTab, switchTab }) => {
               : classes.tabSelector
           }
         >
-          <List />
-          Prodotti
+          <Trophy />
+          La tua squadra
         </button>
       </nav>
     </footer>
