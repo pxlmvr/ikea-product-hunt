@@ -1,0 +1,15 @@
+{
+  "short_name": "Fantaikea",
+  "name": "Fantaikea - Find Your Team",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "300x300",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#0058a2",
+  "display": "standalone",
+  "theme_color": "#0058a2"
+}
