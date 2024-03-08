@@ -1,7 +1,6 @@
 import classes from './styles.module.css'
 
 import { IkeaProduct } from '@/data/series'
-import { Card } from '@/components/Card'
 import { useContext } from 'react'
 import { TeamContext } from '@/context/teamContext'
 import { Search } from '@/components/icons/Search'

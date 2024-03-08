@@ -1,5 +1,5 @@
 .productContainer {
-  height: 500px;
+  height: 40vh;
   overflow-y: scroll;
   border-bottom: 1px solid var(--pearl);
   margin: 1rem 0 2rem 0;
