@@ -24,6 +24,12 @@ export const TeamProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }, [products])
 
+  useEffect(() => {
+    const cachedProducts: string | null = localStorage.getItem('products')
+
+    if (cachedProducts) setProducts(JSON.parse(cachedProducts))
+  }, [])
+
   return (
     <TeamContext.Provider
       value={{
