@@ -12,7 +12,7 @@ export default defineConfig({
       injectRegister: 'auto',
       strategies: 'generateSW',
       manifest: {
-        name: 'FantaIkea - Find your team',
+        name: 'FantaIkea',
         short_name: 'FantaIkea',
         description: 'A product hunt for Ikea visits',
         theme_color: '#0058a2',
