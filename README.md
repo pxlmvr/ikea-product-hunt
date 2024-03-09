@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# FantaIkea
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to FantaIkea, a product hunt application designed to enhance your Ikea visits. This application allows users to keep track of products they wish to find during their visit to Ikea, making the shopping experience more efficient and enjoyable.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Tracking:** Easily add and manage a list of Ikea products you're interested in finding.
+- **Progress Tracking:** Mark products as found as you navigate through Ikea, keeping track of your shopping progress.
+- **Local Storage:** Your product list is saved in your browser's local storage, so you can close the app and come back to it without losing your data.
+- **Responsive Design:** Whether you're using a mobile phone or a desktop, FantaIkea's design adapts to your device for an optimal viewing experience.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js for the frontend UI.
+- Vite as the build tool for a fast development experience.
+- Vite Plugin PWA for turning the application into a Progressive Web App.
+- Local Storage for persisting user data across sessions.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get started with FantaIkea:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository to your local machine.
+2. Run `npm install` to install the necessary dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open your browser and navigate to `http://localhost:3000` to see the app in action.
